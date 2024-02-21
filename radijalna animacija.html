@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kutija sa krugom</title>
+  <style>
+    .rectangle {    
+        border-radius: 10px;
+        display: inline-block;
+        margin-bottom: 0px;
+        margin-right: 0px;
+        width: 500px;
+        height: 500px;
+        border: 2px solid #000;
+        background-color: rgb(10, 2, 7);
+        padding-left: 0px;
+        
+    }
+    .circle {
+        width: 400px;
+        height: 400px;
+        animation-name: my-animation;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        background:linear-gradient(60deg,#fb5dad,#55fb9f,#b97aff);
+        transform:rotate(120deg);
+        border-radius: 50%;
+        position: relative;
+        left:50px;
+        top: 50px;
+        box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.5);      
+        }
+
+    @keyframes my-animation{
+        0% {
+            transform: translate(0px) rotate(60deg);
+            filter :drop-shadow(0px 0px 20px #fb5dad )
+        }
+        16% {
+          transform: translate(0px) rotate(120deg);
+          filter :drop-shadow(0px 0px 20px #55fb9f )
+        }
+        
+        33%{
+            transform: translate(0px) rotate(180deg);
+            filter :drop-shadow(0px 0px 20px #b97aff )
+
+        }
+        49% {
+          transform: translate(0px) rotate(240deg);
+          filter :drop-shadow(0px 0px 20px #fb5dad )
+        }
+        66% {
+        transform: translate(0px) rotate(300deg);
+        filter :drop-shadow(0px 0px 20px #55fb9f )
+        }
+      
+      /*82%{
+          transform: translate(0px) rotate(360deg);
+          filter :drop-shadow(0px 0px 20px #b97aff )
+        }*/
+      100% {
+          transform: translate(0px) rotate(360deg);
+          filter :drop-shadow(0px 0px 20px #fb5dad ) 
+        }
+      }
+    .circle2 {
+        width: 300px;
+        height: 300px;
+        background:rgb(17, 17, 18);
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        animation-name: fadeInOut;
+        animation-duration: 6s; /* Apply fade-in fade-out animation */
+        animation-iteration-count: infinite;
+
+    }
+    .circle3{
+        background:rgb(17, 17, 18);
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        animation-name: fadeInOut,scaleInOut;
+        animation-duration: 6s; /* Apply fade-in fade-out animation */
+        animation-iteration-count: infinite;
+
+    }
+    @keyframes scaleInOut {
+      0%, 100% {
+          transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+          transform: translate(-50%, -50%) scale(1.5);
+      }
+  }
+     
+    @keyframes fadeInOut {
+        50%{
+            filter:opacity(70%) ;
+        }
+        100% {
+            filter:opacity(100%) ;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="rectangle">
+    <div class="circle">
+    <div class="circle2"></div>
+    </div>
+  
+</body>
+</html>
